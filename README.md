@@ -15,11 +15,15 @@ To do a 4-videos mashup we use:
 ```
 We test the codecs using 480p resolution videos. The order, from left to right and from top to bottom is VP8, VP9, h265 (HEVC), AV1.
 
-
+![mosaic_480](https://user-images.githubusercontent.com/59645746/101342666-2eaea200-3883-11eb-9b11-4c9023f59600.png)
 
 We can observe that VP8 is the worst one in terms of compression and framerate preservation. VP9 and h265 are similar and perform better than VP8 in both aspects. AV1 seems to keep a high fidelity image and a smooth framerate, but took the longest to convert in the previous exercise.
 
 Now we try the same but in 120p resolution. 
+
+![mosaic_120](https://user-images.githubusercontent.com/59645746/101342792-57cf3280-3883-11eb-9c90-e9d55b1764f4.png)
+
+In this case the quality is so low that we can't tell how the codecs perform in terms of compression, but the framerate preservation is the same as the 480p example.  
 
 **Exercise 3** Try to achieve with FFMpeg or FFServer to create a live streaming of the BBB Video. You should broadcast it into an IP address (locally of course) and open this IP or URL inside VLC Media Player.
 
@@ -31,7 +35,7 @@ And to receive it we use the online streaming feature from VLC and plug:
 
 **Exercise 4:** Try to generate a python script that enables/activates the online streaming.
 
-We simply put the commands from the last exercise into a function, so writing the filename automatically starts the streaming and doing a keyboardinterrupt (ctrl+c) shuts it down.
+We simply put the commands from the last exercise into a function, so writing the video filename automatically starts the streaming and doing a keyboardinterrupt (ctrl+c) shuts it down.
 
 ### Code
 
