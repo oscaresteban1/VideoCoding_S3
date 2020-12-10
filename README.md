@@ -31,7 +31,7 @@ To generate the streaming we use:
 ```ffmpeg -re -i BBB.mp4 -v 0 -vcodec mpeg4 -f mpegts udp://127.0.0.1:23000```
 
 And to receive it we use the online streaming feature from VLC and plug:
-```dp://@:23000```
+```udp://@:23000```
 
 We are able to watch the video with sound and with the proper framerate.
 
